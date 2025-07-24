@@ -21,7 +21,7 @@ export default function FeatureCard({
             className="group block rounded-xl focus:outline-none focus-visible:ring-4 focus-visible:ring-[var(--color-primary)] transition"
             aria-label={`Learn more about ${title}`}
         >
-            <Card className="p-6 h-full group-hover:bg-[var(--color-primary)]  group-hover:ring-[var(--color-primary)] transition">
+            <Card className="p-6 h-full">
                 <h3 className="card-heading mb-2">{title}</h3>
                 <p className="card-subtext mb-4">{description}</p>
                 <div className="flex items-center gap-2 font-medium">

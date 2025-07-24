@@ -17,7 +17,7 @@ export default function RootLayout({
             <body>
                 <Header routes={routes} />
                 <main className="bg-white dark:bg-gray-900 min-h-screen pt-16 transition-colors duration-300">
-                    <div className="px-6 py-12 container mx-auto">
+                    <div className="py-12 container mx-auto">
                         <ApolloWrapper>{children}</ApolloWrapper>
                     </div>
                 </main>

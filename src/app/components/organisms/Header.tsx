@@ -19,9 +19,9 @@ const Header: React.FC<HeaderProps> = ({ routes }) => {
 
     return (
         <header className="fixed top-0 left-0 w-full z-50 h-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 text-white backdrop-blur-md px-4 shadow-md">
-            <div className="max-w-screen-xl mx-auto flex items-center justify-between h-full">
+            <div className="container mx-auto flex items-center justify-between h-full">
                 <Link href="/" aria-label="Go to homepage">
-                    <span className="text-xl font-bold whitespace-nowrap">
+                    <span className="text-xl font-bold whitespace-nowrap select-none">
                         Rick & Morty Explorer
                     </span>
                 </Link>
@@ -31,7 +31,7 @@ const Header: React.FC<HeaderProps> = ({ routes }) => {
                         <Link
                             key={route.href}
                             href={route.href}
-                            className="text-sm font-medium text-white dark:text-gray-300 hover:underline transition"
+                            className="text-sm font-medium text-white dark:text-gray-300 hover:underline transition select-none"
                         >
                             {route.label}
                         </Link>

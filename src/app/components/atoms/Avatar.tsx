@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type AvatarProps = {
     src: string;
     alt: string;
@@ -13,7 +15,7 @@ export default function Avatar({ src, alt, size = 96 }: AvatarProps) {
             role="img"
             aria-label={alt}
         >
-            <img
+            <Image
                 src={src}
                 alt={alt}
                 width={size}

@@ -1,17 +1,10 @@
 import CharacterCard from "../molecules/CharacterCard";
 
-type Character = {
-    id: string;
-    name: string;
-    image: string;
-    status: string;
-    species: string;
-};
+import { Character } from '../../../types/character';
 
 interface CharacterGridProps {
     characters: Character[];
 }
-
 export default function CharacterGrid({ characters }: CharacterGridProps) {
     if (characters.length === 0) {
         return (

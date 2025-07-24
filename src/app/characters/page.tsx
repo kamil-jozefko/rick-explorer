@@ -2,7 +2,8 @@
 
 import { gql, useQuery } from "@apollo/client";
 import CharacterGrid from "../components/organisms/CharacterGrid";
-
+import LoadingSpinner from "../components/molecules/LoadingSpinner";
+import ErrorMessage from "../components/molecules/ErrorMessage";
 type Character = {
     id: string;
     name: string;
@@ -30,19 +31,8 @@ export default function CharactersPage() {
         variables: { page: 1 },
     });
 
-    if (loading)
-        return (
-            <p className="text-center text-gray-700 dark:text-gray-300 mt-10">
-                Loading...
-            </p>
-        );
-    if (error)
-        return (
-            <p className="text-center text-red-600 dark:text-red-400 mt-10">
-                Error: {error.message}
-            </p>
-        );
-
+if (loading) return <LoadingSpinner />;
+if (error) return <ErrorMessage message={error.message} />;
     const characters: Character[] = data?.characters?.results ?? [];
 
     return <CharacterGrid characters={characters} />;
